@@ -1,4 +1,4 @@
-<!-- <?php
+ <?php
     include 'connection.php';
     session_start();
 
@@ -48,10 +48,10 @@
         }
     } 
 
-?> -->
-<!-- <style type="text/css">
+?> 
+ <style type="text/css">
     <?php include 'main.css'; ?>
-    </style> -->
+    </style> 
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -137,7 +137,7 @@
         </div>
         <div class="shop">
             <h1 class="title">Shop best selling</h1>
-<!--             <?php
+      <?php
                if(isset($message)){
                 foreach ($message as $message) {
                     echo'
@@ -148,13 +148,13 @@
                 ';
             }
         }
-        ?> -->
+        ?> 
         <div class="box-container">
-<!--             <?php
+           <?php
                 $select_products =mysqli_query($conn,"SELECT * FROM `products` LIMIT 4") or die('query failed');
                 if(mysqli_num_rows($select_products) > 0){
                     while($fetch_products=mysqli_fetch_assoc($select_products)){
-                ?> -->
+                ?>
                 <form action="" method="post" class="box">
                     <img src="image/<?php echo $fetch_products['image'];?>">
                     <div class="price">₹<?php echo $fetch_products['price'];?>/-</div>
@@ -170,12 +170,12 @@
                         <button type="submit" name="add_to_cart" class="bi bi-cart"></button>
                     </div>
                 </form>
-<!--             <?php
+          <?php
                     }
                 }else{
                         echo '<p class="empty">No Products Added Yet!!</p>';
                 }
-            ?> -->
+            ?> 
         </div>
         <div class="more">
         <a href="shop.php">Load More</a>    
